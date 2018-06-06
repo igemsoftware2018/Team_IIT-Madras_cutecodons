@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1cm 1fr;
+}
+#header{
+  background: #000000;
+  color: #ffffff;
+  padding: 2mm;
+  grid-column: span 2;
+}
+#input{
+  background: #282828;
+  padding: 1cm;
+  display: grid;
+  grid-template-rows: 1fr 1cm;
+}
+#fastainput{
+  width: 100%;
+}
+#output{
+  background: #202020;
+  color: #ffffff;
+  padding: 1cm;
+  display: inline-block;
+  overflow-y: scroll;
+  font-family: monospace;
+}
+#outputArea{
+  max-width: 40vw;
+  word-wrap: break-word;
+}

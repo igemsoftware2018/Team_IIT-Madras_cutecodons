@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>CUTECodons</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="readfasta.js"></script>
+  <script src="cutecodons.js"></script>
+</head>
+<body>
+  <div id="header">
+    CUTECodons: Codon Usage Table Generator
+  </div>
+  <div id="input">
+    <textarea id="fastainput" placeholder="Paste FASTA Sequence here"></textarea>
+    <br>
+    <button onclick="generateTable()">Generate Table</button>
+  </div>
+  <div id="output">
+    Generated Codon Usage Table:
+    <br>
+    <div id="outputArea">
+    </div>
+  </div>
+</body>
