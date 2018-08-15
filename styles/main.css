@@ -1,0 +1,114 @@
+@font-face {
+  src: url(/fonts/gir.otf);
+  font-family: sansfont;
+}
+@font-face {
+  src: url(/fonts/inconsolata.otf);
+  font-family: monofont;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0mm;
+  margin: 0mm;
+  font-family: sansfont;
+  font-size: 4mm;
+  color: #242729;
+  display: grid;
+  grid-template-rows: 17mm 1fr 15mm;
+  height: 100vh;
+}
+
+#header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr auto;
+  padding: 5mm;
+  background: #05080a;
+  color: #ffffff;
+  font-size: 5.5mm;
+}
+
+#header img {
+  height: 7mm;
+  width: auto;
+}
+
+#header a {
+  text-decoration: none;
+}
+#footer{
+  background: #05080a;
+  padding: 5mm;
+}
+#footer img{
+  height: 5mm;
+  width: auto;
+  vertical-align: -0.5mm;
+  margin-right: 1mm;
+}
+#footer a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 5mm;
+}
+#content {
+  text-align: center;
+  overflow-y: scroll;
+  color: #242729;
+}
+#content div{
+  display: none;
+  text-align: center;
+  font-size: 5mm;
+  grid-template-columns: 2fr 1fr;
+}
+#content a{
+  display: inline-block;
+  background: #06c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2mm 5mm;
+  font-size: 5mm;
+  border-radius: 10mm;
+}
+#content div p{
+  text-align: justify;
+  padding: 10mm;
+}
+#content div p:nth-child(2){
+  text-align: right;
+}
+#pasteseq textarea{
+  background: #9cf;
+  border: 0.5mm solid #9cf;
+  border-radius: 1mm;
+  width: 100%;
+  height: 100mm;
+}
+#pasteseq textarea:focus{
+  outline: none;
+  border: 0.5mm solid #06c;
+  color: #06c;
+  padding: 2mm;
+  font-family: monofont;
+  font-size: 5mm;
+}
+a:hover{
+  cursor: pointer;
+  cursor: hand;
+}
+#result table{
+  font-family: monofont;
+}
+
+#result table td:nth-child(2n){
+  padding-right: 15mm;
+  text-align: right;
+}
+#result table tr:nth-child(4n) td{
+  padding-bottom: 3mm;
+}

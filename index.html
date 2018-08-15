@@ -2,23 +2,51 @@
 <head>
   <title>CUTECodons</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="readfasta.js"></script>
-  <script src="cutecodons.js"></script>
+  <link rel="icon" type="image/png" href="/icons/chassidex.png" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <script src="/scripts/readfasta.js"></script>
+  <script src="/scripts/cutecodons.js"></script>
+  <script src="/scripts/main.js"></script>
 </head>
-<body>
+<body onload="init()" onhashchange="goto()">
   <div id="header">
-    CUTECodons: Codon Usage Table Generator
+    <span>CUTE: Codon Usage Table Easy</span>
+    <a href="https://chassidex.org">
+      <img src="/icons/chassidex-text.png">
+    </a>
   </div>
-  <div id="input">
-    <textarea id="fastainput" placeholder="Paste FASTA Sequence here"></textarea>
-    <br>
-    <button onclick="generateTable()">Generate Table</button>
-  </div>
-  <div id="output">
-    Generated Codon Usage Table:
-    <br>
-    <div id="outputArea">
+  <div id="content">
+    <div id="start">
+      <p>
+        CUTE is a program that can be used to generate Codon Usage Tables from
+        protein coding sequences
+      </p>
+      <p>
+        <a href="/#pasteseq">Click to Start</a>
+      </p>
+    </div>
+    <div id="pasteseq">
+      <p>
+        Paste FASTA formatted DNA/RNA sequences below and click on Generate
+        <br><br>
+        <textarea id="fastainput"></textarea>
+      </p>
+      <p>
+        <a onclick="analysePasteSeq()">Generate</a>
+      </p>
+    </div>
+    <div id="result">
+      <p id="outputArea"></p>
+      <p>
+        <a href='/#start'>Back to home page</a>
+      </p>
     </div>
   </div>
+  <div id="footer">
+    <a href="https://github.com/ChassiDex/cutecodons">
+      <img src="/icons/github.png">
+      View Code
+    </a>
+  </div>
+
 </body>
